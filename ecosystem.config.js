@@ -24,7 +24,7 @@ module.exports = {
       path : '/var/www/iceandfire/production', //要发布到服务器的哪个目录下
       'ssh_options': 'StrictHostKeyChecking=no',//避免clone分支的时候key的验证而失败
       'pre-deploy': 'git fetch --all',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+      // 'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
       'pre-deploy-local': 'echo "Deploy Done!"',//在发布之前先跑一遍本地的任务，代码格式，压缩编译等
       env: {
         NODE_ENV: 'production'
