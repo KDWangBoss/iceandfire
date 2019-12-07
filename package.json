@@ -1,0 +1,20 @@
+{
+  "name": "iceandfire",
+  "version": "1.0.0",
+  "description": "慕课网冰火之歌",
+  "main": "ecosystem.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KDWangBoss/iceandfire.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KDWangBoss/iceandfire/issues"
+  },
+  "homepage": "https://github.com/KDWangBoss/iceandfire#readme"
+}
