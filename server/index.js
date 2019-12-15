@@ -1,6 +1,8 @@
 const Koa = require('koa')
 const consola = require('consola')
-const {resolve} = require('path')
+const {
+  resolve
+} = require('path')
 const {
   Nuxt,
   Builder
@@ -13,7 +15,7 @@ config.dev = process.env !== 'production'
 const host = process.env.HOST || '127.0.0.1';
 const port = process.env.PORT || 3000;
 
-const MIDDLEWARES = ['router']
+const MIDDLEWARES = ['database', 'router']
 class Server {
   constructor() {
     this.app = new Koa();
@@ -22,7 +24,7 @@ class Server {
 
   useMiddleWares(app) {
     return R.map(R.compose(
-      R.map(i => i(app)),
+      R.map(i =>i(app)),
       require,
       i => `${r('./middlewares')}/${i}`
     ))

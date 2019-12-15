@@ -2,9 +2,11 @@ const Router = require('koa-router');
 const config = require('../config');
 const sha1 = require('sha1');
 
+
 const router = app => {
     const router = new Router();
     router.get('/wechat-hear', (ctx, next) => {
+        require('../wechat');
         const token = config.wechat.token;
         const {
             signature,
