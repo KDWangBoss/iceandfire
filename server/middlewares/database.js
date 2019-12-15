@@ -1,3 +1,6 @@
+/**
+ * 连接数据库，对数据库进行操作的中间件
+ */
 const mongoose = require('mongoose');
 const config = require('../config');
 const fs = require('fs');
